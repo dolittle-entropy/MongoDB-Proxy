@@ -134,6 +134,7 @@ func main() {
 	flag.StringVar(&serverPrivateKeyPath, "private-key-path", "server.key.pem", "Path to the proxy servers private key")
 	flag.StringVar(&mongoHost, "mongo-host", "", "The address of the mongo cluster")
 	flag.StringVar(&tenantCertFolder, "tenant-cert-folder", "", "The folder containing the tenant certificates")
+	flag.Parse()
 
 	caCert, err := ioutil.ReadFile(caCertPath)
 	if err != nil {
